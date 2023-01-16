@@ -1,4 +1,5 @@
 import axios from 'axios'
+import {TOKEN} from '../config.js'
 
 
 export const getEquipo = (req,res) => {
@@ -17,7 +18,7 @@ export const getPosts = async (req,res) => {
 
 
 export const getBetsapi = async (req,res) => {
-    const token="7865-b0PXlPMI94xvu3"
+    const token=TOKEN
     const temp_id=207
     //const url='https://api.betsapi.com/v1/events/inplay?sport_id=1&token='+token    
     const clasificacion='https://api.betsapi.com/v2/league/table?&token='+token+'&league_id='+temp_id
