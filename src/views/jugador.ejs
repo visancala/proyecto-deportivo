@@ -1,0 +1,13 @@
+<%- include ('partials/header.ejs') %>
+    <p>este debe ser <%= jugador%></p>
+    <%= new Date() %>
+
+    <% if (isActive) { %>
+        <p>Servidor activo</p>
+    <% } else { %>
+        <p>Servidor Inactivo error</p>
+    <% } %>
+
+    
+
+<%- include ('partials/footer.ejs') %>

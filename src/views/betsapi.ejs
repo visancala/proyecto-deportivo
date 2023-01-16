@@ -1,0 +1,30 @@
+<%- include ('partials/header.ejs') %>
+
+<h1>Betsapi</h1>
+
+<%= new Date() %><br />
+
+Nombre: <%= tabla['name'] %><br />
+Jornada actual: <%= tabla['currentround'] %><br />
+Total jornadas: <%= tabla['maxrounds'] %><hr />
+
+<table border="" cellspacing="2" cellpadding="2" bgcolor="gainsboro">
+<% for (i=0; i < tabla['rows'].length ; i++) { %>
+    <tr bgcolor="red">
+        <td align="left"><%= tabla['rows'][i].team['name'] %></td>
+        <td align="center"><%= tabla['rows'][i].pos %></td>
+        <td align="center"><%= tabla['rows'][i].win %></td>
+        <td align="center"><%= tabla['rows'][i].draw %></td>
+        <td align="center"><%= tabla['rows'][i].loss %></td>
+        <td align="center"><%= tabla['rows'][i].goalsfor %></td>
+        <td align="center"><%= tabla['rows'][i].goalsagainst %></td>
+        <td align="center" bgcolor="orange"><%= tabla['rows'][i].points %></td>
+        <td align="center"><%= tabla['rows'][i].goalDiffTotal %></td>
+        <td align="center"><%= tabla['rows'][i].team['image_id'] %></td>
+    </tr>
+<% } %>
+</table>
+<hr />
+
+
+<%- include ('partials/footer.ejs') %>
